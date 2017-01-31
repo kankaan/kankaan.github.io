@@ -1,0 +1,93 @@
+<html>
+    <head>
+	<meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css"
+        href="bootstrap.min.css">
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     </head>
+<body>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6" id="center">
+        <div id="banner" >
+		<h2>Antin kotisivu</h2>
+		<div id="bannerImage" class="row">
+    			<img src="inge1.jpg">
+		</div>
+        </div>
+	<div id="app">
+       		 <div id="navBar" class="row">
+           		<ul id="navigationbar" class="nav nav-tabs"
+		         v-on:click.prevent>
+               			 <li v-bind:class="{ active: home }" ><a href="#" v-on:click="makeActive(0)">Etusivu</a></li>
+                		<li  v-bind:class="{ active: workHistory }" ><a href="#"  v-on:click="makeActive(1)">Työhistoria</a></li>
+                		<li v-bind:class="{ active: hobbies }" ><a href="#" v-on:click="makeActive(2)">Harrastukset</a></li>
+                		<li v-bind:class="{ active: workSamples }" ><a href="#" v-on:click="makeActive(3)">Työnäytteet</a></li>
+				<li v-bind:class="{ active: skills }" ><a href="#" v-on:click="makeActive(4)" >Taidot</a></li>
+				<li v-bind:class="{ active: philosophy }" ><a href="#" v-on:click="makeActive(5)">Työ-filosofia</a></li>
+			</ul>
+        	</div>
+        	<div id="content" class="row">
+            		<div id="contentTitle">
+               			 <h2>{{ title }}</h2>
+							<br>
+            		</div>
+        <div v-show=" home">
+			Tervetuloa kotisivuilleni! <br>
+			Näillä sivuilla kerron taidoistani, harrastuksistani ja mitä ajattelen ohjelmoinnista.
+		</div>
+		<div v-show="workHistory">
+ 		 Työurani aloitin Saariosilla ennen armeijaa.
+		  ABB
+		  - Scrum
+		  - Dippa
+		  - virusskanneri
+		  - bugimetriikat
+		  - kanban
+		  Projektityökurssi:
+		  gofore
+		  Saarioinen:
+		  
+		</div>
+		<div v-show="hobbies">
+			Harrastukset...
+		</div>
+		<div v-show="skills">
+			<p>
+		Tässä muutamia tekniikoita, joita olen opiskellut. </p>
+
+		<p>
+  		C++ oli ensimmäinen tuttavuuteni ohjelmoinnin maailmasta. Sitä opetettiin TTY:llä meille ensimmäisenä ohjelmointikielenä.
+		  </p>
+		  <p>
+		  Python
+		  </p>
+		  C#
+		Javascript
+		-Vue.js
+
+		</div>
+<div v-show="workSamples">
+  		Chat
+		  Sivusto
+		  travian softa
+		  tulevaa tuotantoa
+		</div>
+<div v-show="philosophy">
+	filosofia
+</div>
+		</div>
+	</div>
+	
+        <div id="footer" class="row">
+		<script src="scripts.js"></script>
+        	Antti
+	</div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+</body>
+</html>
