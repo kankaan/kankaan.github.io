@@ -2,8 +2,10 @@
     <head>
 	<meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css"
-        href="bootstrap.min.css">
+        <!---<link rel="stylesheet" type="text/css"
+        href="bootstrap.min.css">-->
+		    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 	<script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -14,10 +16,48 @@
     <div class="col-md-6" id="center">
         <div id="banner" >
 		<h2>Antin kotisivu</h2>
-		<div id="bannerImage" class="row">
-    			<img src="inge1.jpg">
-		</div>
         </div>
+
+
+		  <div id="Carousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li class="item1 active"></li>
+      <li class="item2"></li>
+      <li class="item3"></li>
+    </ol>
+
+	   <div class="carousel-inner" role="listbox">
+	      	<div class="item active">
+    	    		<img src="inge1.jpg" alt="Inge1" width="460" height="345">
+				  	<div class="carousel-caption">
+   					 <h3></h3>
+    				<p></p>
+  					</div>
+      		</div>
+
+	<div class="item">
+        <img src="hylly.jpg" alt="Hylly" width="460" height="345">
+    </div>
+
+	<div class="item">
+		<img src="inge2.jpg" alt="Inge2" width="460" height="345">
+	</div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#Carousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#Carousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+	   </div>
+
+
+
 	<div id="app">
        		 <div id="navBar" class="row">
            		<ul id="navigationbar" class="nav nav-tabs"
@@ -36,11 +76,37 @@
 							<br>
             		</div>
         <div v-show=" home">
-			Tervetuloa kotisivuilleni! <br>
-			Näillä sivuilla kerron taidoistani, harrastuksistani ja mitä ajattelen ohjelmoinnista.
+			<h5 >Tervetuloa kotisivuilleni!</h5>
+			<p>
+			Olen 28-vuotias ohjelmoijanalku, jonka sydän sykkii puujalkahuumorille, jonka pikkurillin on vienyt Python 
+			ja jonka jalat vievät juuri Teidän firmaanne. 
+			Näillä kotisivuilla kerron itsestäni, taidoistani ja kokemuksistani. Hauska tutustua! 
+			</p> 
+			Antti K
 		</div>
 		<div v-show="workHistory">
- 		 Työurani aloitin Saariosilla ennen armeijaa.
+			<p>
+				Tällä hetkellä teen diplomityötä ABB:lle aiheesta taajuusmuuttaja tietoturva. 
+				Diplomityö pitää sisällään uhkamallin teon taajuusmuuttajalle ja suositukset, 
+				miten kyberturvallisuutta voidaan parantaa tulevaisuudessa.
+			</p>
+			<p>
+				Olen työskennellyt ABB:n pitäjänmäen konttorissa yhtäjaksoisesti toukokuusta 2014 alkaen. 
+				Kesät täysipäiväisenä työntekijänä ja loput vuodesta osa-aikaisena, pari päivää viikossa.
+				ABB:llä työskentelin tuotekehitysprosesseja kehittävässä tiimissä. Vastuualueenani oli ABB Drivesin <b>ohjelmistokehitys prosessien kehittäminen </b>
+				yhdessä kollegani kanssa.
+			</p>
+			<p>
+				ABB:lla minulla oli 
+
+				Prose
+
+				ABB:llä minulle tutuksi järjestelmäksi muodostui Microsoftin ALM järjestelmä Team Foundation Server (TFS).
+				TFS:ään kanssa minulla oli heti ensimmäisenä syksynäni isompi projekti menossa. Meillä oli käytössä Bugzilla bugien raportointiin ja hallinnointiin.
+				Mutta kun otimme TFS:n käyttöön, niin kaikista järkevintä oli siirtää bugien hallinnointi TFS:ään. Minun tehtäväni tässä urakassa oli <b> mapata </b>
+				bugit järjestelmästä toiseen siten, että mitään tietoa ei katoa. Tämä osoittautui pitemmäksi työksi kuin olimme aluksi aavistelleet ja viimeisen projektin bugit
+				siirrettiin TFS:ään vasta maaliskuussa.
+			</p>
 		  ABB
 		  - Scrum
 		  - Dippa
@@ -50,29 +116,108 @@
 		  Projektityökurssi:
 		  gofore
 		  Saarioinen:
-		  
+		<div class="well">
+		  <h3>Virusskannauspalvelu</h3>
+		  <div id="virusScanner">
+		  <p>
+			Toinen mielenkiintoinen projekti ABB:llä syntyi, kun saimme firman laajuiset tietoturvamääräykset.
+			Eräs kohta näissä määräyksissä oli, että julkaistava softa oli skannattava vähintään kolmella eri virusskannerilla.
+			Tämä vaatimus oli pyörinyt jonkin aikaa tiimimme Kanban taululla, kun minä lopulta päätin, että minä hoidan tämän tehtävän.
+			Aluksi aloitin keskustelut eri softatiimien kanssa ja sain selville, että eräässä toisessakin tiimissä oltiin puuhaamassa vastaavaa työtä.
+			Tosin tämä työ oli ollut suunnitteilla lähinnä heidän omaan käyttöönsä ja piti sisällään lähinnä erilaisia powershell skriptejä.
+			Tällöin toteutus ei olisi hyödyttänyt muita tiimejä, joten päätimme yhdistä voimamme ja otimme pienen aikalisän. 
+		  </p>
+		  <p>
+			  Pohdimme, että järkevintä olisi selvittää, että mitä muualla firmassa tehdään, koska kyseessä oli koko firmaa koskeva määräys.
+			  Niinpä otimme yhteyttä Vaasaan, että onko heillä olemassa jo jonkinnäköinen ratkaisu kyseiseen ongelmaan. Useita puheluita myöhemmin kävi ilmi, 
+			  että kyllä heillä oli! Otimme yhteyttä kehittäjään ja kysyimme aluksi, että olisiko meidän ollut mahdollista liittyä heidän järjestelmäänsä?
+			  Kehittäjä sanoi, että ei ole, koska sitten ylläpitovastuu lankeaisi hänelle. Hän lupasi kuitenkin toimittaa meille lähdekoodin järjestelmästä, jota voisimme käyttää vapaasti.
+			  Tutustuttuamme lähdekoodiin tulimme siihen tulokseen, että kyseessä oli hyvä toteutus ja asennamme sen omalle serverillemme toimimaan.
+			  Ympäristön vaihtuminen Linuxista Windowsiin ei tuonut sen suurempia haasteita, mutta sitten päätimme toteuttaa vielä nettikäyttöliittymän työkaluun.
+			  Minä vastasin siitä ja toteutin sen luonnollisesti C#:lla ja ASP.Net:llä.
+		  </p>
+		  <p>
+			  Kun palvelu oli saatu toimimaan, oli sen tarkoitus toimia väliaikaisena ratkaisuna oman väen keskuudessa.
+			  Kuitenkin kävi, niin että huhut alkoivat liikkua ja Saksasta ja Englannista osoitettiin kiinnostusta työkalua kohtaan.
+			  Näin ollen järjestelmä tuli paljon suuremmalle käytölle kuin aluksi oli ajateltu.
+		  </p>
+		  </div>
+		</div>
 		</div>
 		<div v-show="hobbies">
 			Harrastukset...
+			<p>
+				Harrastan salibandya, patikointia ja kirjallisuutta, mikä on tällä hetkellä suosikkiharrastukseni.
+				Luen kirjallisuutta laidasta laitaan (etusivulta takasivulle, heh). Minua kiehtovat erilaiset tietokirjat,
+				koska niistä voi oppia jotain uutta. Tämän lisäksi olen tykästynyt erilaisiin maailmankirjallisuuden klassikoihin.
+			</p>
+				Puulaaki, patikointi, kotimaahan tutustuminen
+
+	Koira
+	Lukeminen: klassikot, sijoituskirjallisuus, ohjelmistokirjallisuus
+	Vinkkilista (sivupalkki)
 		</div>
 		<div v-show="skills">
 			<p>
 		Tässä muutamia tekniikoita, joita olen opiskellut. </p>
 
+- Mitä haet
+	Tietotekniikkakäsitys: auttaa tietotekniikalla yhteiskuntaa, 	tehostaminen
+	Fullstack
+	Scrum, product owner
+	Vapaan lähdekoodin ohjelmistot
+
+- Mitä tuon
+	Eri teknologiat (ks. kyvut)
+	Tiimipelaaja??
+	Hyvä energia??
+	Opiskelu
+	Yllätyksellisyys: viikset vaihtuu
 		<p>
-  		C++ oli ensimmäinen tuttavuuteni ohjelmoinnin maailmasta. Sitä opetettiin TTY:llä meille ensimmäisenä ohjelmointikielenä.
+  		C++ oli ensimmäinen tuttavuuteni ohjelmoinnin maailmasta. Sitä opetettiin TTY:llä meille ensimmäisenä ohjelmointikielenä. 
 		  </p>
 		  <p>
-		  Python
+		  <img src="python-logo.png" alt="Python" width="260" height="145">
+		  Python on ehdottomasti suosikkikieleni. Se on nopea kirjoittaa ja 
+		  tulkkattavana kielenä pienten ohjelmien kirjoittaminen onnistuu joutuisasti.
+		  Lisäksi Pythonin PyPi sisältää enemmän kuin tarpeeksi valmiita kirjastoja helposti käyttöönotettavaksi.
+		  </p>
+		  <p>
+			  Javascript on kielenä erittäin mielenkiintoinen tapaus. Parhaiten pääsinkin tutustumaan siihen TTY:n projektityökurssilla, 
+			  jossa teimme datan visualisointi nettisivun (Matta).
+			  <br>
+			  - asynkroninen suoritus
+			  <br>
+			  frameworkit: angular.js ja vue.js.
+			  Vue.js:n tutustuin näiden sivujen myötä. Framework on melko uusi, mutta saavuttanut lyhyessä ajassa suuren suosion.
+
+
 		  </p>
 		  C#
-		Javascript
 		-Vue.js
 
 		</div>
 <div v-show="workSamples">
-  		Chat
-		  Sivusto
+		  <p>
+			  Olen tehnyt pieniä harrasteprojekteja.
+		  </p>
+		  <p>
+			  Kaikista mielenkiintoisin harrasteprojekti liittyy nettiselainpelin, Travianin, automatisointiin.
+			  Pelissä menestyäkseen täytyy olla koneen ääressä yötä päivää. Tämä käy kuitenkin pitemmän päälle hienman rasittavaksi,
+			  joten päätin, että yritän automatisoida pelin eniten aikaa kuluttavimman elementin, ryöstelyn.
+			  Minulla oli hieman vaikeuksia päättää, että miten teen tämän automatisoinnin. Teenkö sen pelkästään http-requesteilla vai miten sen toteutan?
+			  Tulin kuitenkin tulokseen, että sivulla on javascriptiä, jota olisi hyvä päästä ajamaan, joten requestien 
+		  </p>
+		  <p>
+			  ABB:llä olen ollut osallisena projektissa, joka suunnitteli ja toteutti työkalun, 
+			  jolla skannataan toimitettavat softapaketit virusten varalta. Tämän työkalun toteutin yhdessä toisen harjoittelijan kanssa, 
+			  joka piti huolta ohjelmakoodista, joka käynnistää virusskannerit ja tulostaa raportin. 
+			  Itse vastasin nettisivuista, josta skanneriohjelmisto käynnistettiin.
+
+		  </p>
+		  Chat
+		  Sivusto    kello  17:38:07 
+		  	17:38:11
 		  travian softa
 		  tulevaa tuotantoa
 		</div>

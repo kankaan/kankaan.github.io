@@ -8,6 +8,13 @@ img {
     object-fit: contain;
 }
 
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+      max-width: 100%;
+      
+      margin: auto;
+  }
+
 
 #center {
     min-height:70vh;
@@ -17,8 +24,6 @@ img {
     text-align:center;
     margin-top:0px;
     height:auto;
-    //background-image:url("/static/images/inge1.jpg");
-    //background-size: 15%;
 }
 
 #banner > img {
@@ -28,8 +33,6 @@ img {
 
 
 #bannerImage {
-    //background-image:url("/static/images/inge2.jpg");
-    //background-size:20%;
     min-height:30vh;
 }
 

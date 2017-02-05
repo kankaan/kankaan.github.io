@@ -1,14 +1,33 @@
 
 
-
-var frontpageContent = "Tervetuloa kotisivuilleni! Olen 28-vuotias ohjelmoijanalku, jonka sydän sykkii puujalkahuumorille, jonka pikkurillin on vienyt Python ja jonka jalat vievät juuri Teidän firmaanne. Näillä kotisivuilla kerron itsestäni, taidoistani ja kokemuksistani. Hauska tutustua!\<br\> Antti K ";
-/*
-var vuue = new Vue({
-	el: '#content',
-	data: { title: 'terve',
-       	contentText: frontpageContent	}
+// init carousel
+$(document).ready(function(){
+    // Activate Carousel
+    $("#Carousel").carousel("pause");
+    
+    // Enable Carousel Indicators
+    $(".item1").click(function(){
+        $("#Carousel").carousel(0);
+    });
+    $(".item2").click(function(){
+        $("#Carousel").carousel(1);
+    });
+    $(".item3").click(function(){
+        $("#Carousel").carousel(2);
+    });
+    /*$(".item4").click(function(){
+        $("#Carousel").carousel(3);
+    });
+    */
+    // Enable Carousel Controls
+    $(".left").click(function(){
+        $("#myCarousel").carousel("prev");
+    });
+    $(".right").click(function(){
+        $("#myCarousel").carousel("next");
+    });
 });
-*/
+
 var instance = new Vue({
 	
 	// A DOM element to mount our view model.
@@ -41,14 +60,17 @@ var instance = new Vue({
                 case 0:
                     this.home = true;
                     this.title = "Etusivu";
+                    $("#Carousel").carousel(1)
                     break;
                 case 1:
                     this.workHistory = true;
                     this.title = "Työhistoria";
+                    $("#Carousel").carousel(2)
                     break;
                 case 2:
                     this.hobbies = true;
                     this.title = "Harrastukset";
+                    $("#Carousel").carousel(1);
                     break;
                 case 3:
                     this.workSamples = true;
