@@ -75,6 +75,7 @@
                			 <h2>{{ title }}</h2>
 							<br>
             		</div>
+<!-- Frontpage -->
         <div v-show=" home">
 			<h5 >Tervetuloa kotisivuilleni!</h5>
 			<p>
@@ -84,6 +85,9 @@
 			</p> 
 			Antti K
 		</div>
+
+
+<!-- WorkHistory -->
 		<div v-show="workHistory">
 			<p>
 				Tällä hetkellä teen diplomityötä ABB:lle aiheesta taajuusmuuttaja tietoturva. 
@@ -93,24 +97,28 @@
 			<p>
 				Olen työskennellyt ABB:n pitäjänmäen konttorissa yhtäjaksoisesti toukokuusta 2014 alkaen. 
 				Kesät täysipäiväisenä työntekijänä ja loput vuodesta osa-aikaisena, pari päivää viikossa.
-				ABB:llä työskentelin tuotekehitysprosesseja kehittävässä tiimissä. Vastuualueenani oli ABB Drivesin <b>ohjelmistokehitys prosessien kehittäminen </b>
-				yhdessä kollegani kanssa.
+				ABB:llä työskentelin tuotekehitysprosesseja kehittävässä tiimissä. Vastuualueenani oli ABB Drivesin
+				 <b>ohjelmistokehitys prosessien kehittäminen </b>
+				yhdessä kollegani kanssa. Kyseisenä aikana eksyin myös vaatimustenhallinnan pariinkin, mutta resurssien puutten vuoksi,
+				emme päässet viemään prosessia eteenpäin. Tämän lisäksi keskityin myös tiimikavereiden auttamiseen. 
+				Juuri auttamishaluni vuoksi päädyinkin parantamaan vaatimustenhallintaa, sekä auttamaan tuntikirjausjärjetelmän parissa. 
 			</p>
 			<p>
-				ABB:lla minulla oli 
-
-				Prose
-
+				Tiimissä oli käytössä SCRUM-menetelmä, jonka avulla työntekoa ohjattiin. 
+				Mielestäni menelmä itsessän on toimiva, kunhan sen kättäjät osaavat soveltaa sitä käytäntöön.
+				Menetelmässä on hyvää se, että se pakottaa tiimiläiset kommunikoimaan keskenään.
+				Itse yritin tuoda stand-uppeihin 
+			</p>
+			<p>
 				ABB:llä minulle tutuksi järjestelmäksi muodostui Microsoftin ALM järjestelmä Team Foundation Server (TFS).
 				TFS:ään kanssa minulla oli heti ensimmäisenä syksynäni isompi projekti menossa. Meillä oli käytössä Bugzilla bugien raportointiin ja hallinnointiin.
 				Mutta kun otimme TFS:n käyttöön, niin kaikista järkevintä oli siirtää bugien hallinnointi TFS:ään. Minun tehtäväni tässä urakassa oli <b> mapata </b>
-				bugit järjestelmästä toiseen siten, että mitään tietoa ei katoa. Tämä osoittautui pitemmäksi työksi kuin olimme aluksi aavistelleet ja viimeisen projektin bugit
-				siirrettiin TFS:ään vasta maaliskuussa.
+				bugit järjestelmästä toiseen siten, että mitään tietoa ei katoa. Tämä osoittautui hitaammaksi työksi kuin olimme aluksi aavistelleet johtuen eri julkaisujankohdista.
+				Lopulta viimeisen projektin bugit siirrettiin TFS:ään vasta maaliskuussa.
 			</p>
 		  ABB
 		  - Scrum
 		  - Dippa
-		  - virusskanneri
 		  - bugimetriikat
 		  - kanban
 		  Projektityökurssi:
@@ -118,7 +126,10 @@
 		  Saarioinen:
 		<div class="well">
 		  <h3>Virusskannauspalvelu</h3>
-		  <div id="virusScanner">
+		  <button type="button" class="btn btn-default" v-on:click="workHistoryVirusScanner = true" v-show="!workHistoryVirusScanner">
+			   <span class="glyphicon glyphicon-plus"></span>
+		  </button>
+		  <div id="virusScanner" v-show="workHistoryVirusScanner">
 		  <p>
 			Toinen mielenkiintoinen projekti ABB:llä syntyi, kun saimme firman laajuiset tietoturvamääräykset.
 			Eräs kohta näissä määräyksissä oli, että julkaistava softa oli skannattava vähintään kolmella eri virusskannerilla.
@@ -141,38 +152,109 @@
 			  Kuitenkin kävi, niin että huhut alkoivat liikkua ja Saksasta ja Englannista osoitettiin kiinnostusta työkalua kohtaan.
 			  Näin ollen järjestelmä tuli paljon suuremmalle käytölle kuin aluksi oli ajateltu.
 		  </p>
+		  	<button type="button" class="btn btn-default" v-on:click="workHistoryVirusScanner = false" v-show="workHistoryVirusScanner">
+			   <span class="glyphicon glyphicon-minus"></span>
+		  </button>
 		  </div>
 		</div>
 		</div>
+
+
+<!--- Hobbies -->
 		<div v-show="hobbies">
-			Harrastukset...
+
 			<p>
 				Harrastan salibandya, patikointia ja kirjallisuutta, mikä on tällä hetkellä suosikkiharrastukseni.
 				Luen kirjallisuutta laidasta laitaan (etusivulta takasivulle, heh). Minua kiehtovat erilaiset tietokirjat,
 				koska niistä voi oppia jotain uutta. Tämän lisäksi olen tykästynyt erilaisiin maailmankirjallisuuden klassikoihin.
 			</p>
+			<p>	Klikkaa harrastustani, niin saat tietää enemmän. </p>
+
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			<!-- first hobby -->
+			  <div class="panel panel-default">
+				      <div class="panel-heading" role="tab" id="headingOne">
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#accordion" 
+							href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          						Salibandy
+        					</a>
+      					</h4>
+				      </div>
+					<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+     					<div class="panel-body">
+        					Säbä
+      					</div>
+   					</div>
+			  </div>
+			<!-- Second hobby -->
+			 <div class="panel panel-default">
+    					<div class="panel-heading" role="tab" id="headingTwo">
+     					 <h4 class="panel-title">
+        					<a class="collapsed" role="button" data-toggle="collapse" 
+							data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          						Patikointi
+        					</a>
+      					</h4>
+    				</div>
+    				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      					<div class="panel-body">
+							Patikointi 
+     					</div>
+    				</div>
+  			</div>
+				  <!-- Third hobby -->
+			 <div class="panel panel-default">
+    					<div class="panel-heading" role="tab" id="headingThree">
+     					 <h4 class="panel-title">
+        					<a class="collapsed" role="button" data-toggle="collapse" 
+							data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          						Kirjallisuus
+        					</a>
+      					</h4>
+    				</div>
+    				<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      					<div class="panel-body">
+								<p>									
+									Rakastan lukemista. Se on intohimoni.  
+									Tässä listaan joitain lukemiani kirjoja.
+								</p>
+								<input type="text" v-model="searchString" placeholder="rajaa:" />
+								<table class="table table-hover">
+									    <thead>
+      										<tr>
+        									<th>Nimi</th>
+        									<th>Kirjoittaja</th>
+        									<th>kuvaus</th>
+        									</tr>
+        									</thead>
+											<tbody>
+     										 <tr v-for="book in filteredBooks">
+												<td> {{ book.title }} </td>
+												<td> {{ book.author }} </td>
+												<td> {{ book.description }} </td>
+      										</tr>
+								</table>
+      					</div>
+    				</div>
+  				</div>
+
+
+				  <!-- end -->
+			  </div>
+
 				Puulaaki, patikointi, kotimaahan tutustuminen
 
 	Koira
 	Lukeminen: klassikot, sijoituskirjallisuus, ohjelmistokirjallisuus
 	Vinkkilista (sivupalkki)
 		</div>
+
+<!-- Skills -->
 		<div v-show="skills">
 			<p>
 		Tässä muutamia tekniikoita, joita olen opiskellut. </p>
 
-- Mitä haet
-	Tietotekniikkakäsitys: auttaa tietotekniikalla yhteiskuntaa, 	tehostaminen
-	Fullstack
-	Scrum, product owner
-	Vapaan lähdekoodin ohjelmistot
-
-- Mitä tuon
-	Eri teknologiat (ks. kyvut)
-	Tiimipelaaja??
-	Hyvä energia??
-	Opiskelu
-	Yllätyksellisyys: viikset vaihtuu
 		<p>
   		C++ oli ensimmäinen tuttavuuteni ohjelmoinnin maailmasta. Sitä opetettiin TTY:llä meille ensimmäisenä ohjelmointikielenä. 
 		  </p>
@@ -181,6 +263,8 @@
 		  Python on ehdottomasti suosikkikieleni. Se on nopea kirjoittaa ja 
 		  tulkkattavana kielenä pienten ohjelmien kirjoittaminen onnistuu joutuisasti.
 		  Lisäksi Pythonin PyPi sisältää enemmän kuin tarpeeksi valmiita kirjastoja helposti käyttöönotettavaksi.
+		  Tämän lisäksi, että Python on helppokäyttöinen, on se myös suosittu kieli. 
+		  Sen vuoksi moneen kirjastoon löytyykin Python toteutus.
 		  </p>
 		  <p>
 			  Javascript on kielenä erittäin mielenkiintoinen tapaus. Parhaiten pääsinkin tutustumaan siihen TTY:n projektityökurssilla, 
@@ -193,11 +277,15 @@
 
 
 		  </p>
-		  C#
-		-Vue.js
+		  <p>
+			  Edellä mainittujen lisäksi olen tutustunut myös C#:n. C#:a olen käyttänyt niin TTY:n kurssilla, jossa teimme seikkailupelin kuin myös ABB:llä.
+
+		  </p>
 
 		</div>
-<div v-show="workSamples">
+
+<!-- Work samples -->
+		<div v-show="workSamples">
 		  <p>
 			  Olen tehnyt pieniä harrasteprojekteja.
 		  </p>
@@ -206,7 +294,11 @@
 			  Pelissä menestyäkseen täytyy olla koneen ääressä yötä päivää. Tämä käy kuitenkin pitemmän päälle hienman rasittavaksi,
 			  joten päätin, että yritän automatisoida pelin eniten aikaa kuluttavimman elementin, ryöstelyn.
 			  Minulla oli hieman vaikeuksia päättää, että miten teen tämän automatisoinnin. Teenkö sen pelkästään http-requesteilla vai miten sen toteutan?
-			  Tulin kuitenkin tulokseen, että sivulla on javascriptiä, jota olisi hyvä päästä ajamaan, joten requestien 
+			  Tulin kuitenkin tulokseen, että sivulla on javascriptiä, jota saattaa vaikuttaa pelin suorittamiseen.
+		  </p>
+		  <p>
+			  Näin ollen päädynkin siihen lopputulokseen, että kaikista parasta on automatisoida selaimen toiminta. 
+			  Sen hoidin käyttämällä Seleniumia. Selenium
 		  </p>
 		  <p>
 			  ABB:llä olen ollut osallisena projektissa, joka suunnitteli ja toteutti työkalun, 
@@ -215,18 +307,33 @@
 			  Itse vastasin nettisivuista, josta skanneriohjelmisto käynnistettiin.
 
 		  </p>
+		  <p>
+		  </p>
 		  Chat
-		  Sivusto    kello  17:38:07 
-		  	17:38:11
-		  travian softa
 		  tulevaa tuotantoa
 		</div>
-<div v-show="philosophy">
-	filosofia
-</div>
+
+<!-- philosophy -->	
+		<div v-show="philosophy">
+			filosofia
+			- Mitä haet
+	Tietotekniikkakäsitys: auttaa tietotekniikalla yhteiskuntaa, 	tehostaminen
+	Fullstack
+	Scrum, product owner
+	Vapaan lähdekoodin ohjelmistot
+
+- Mitä tuon
+	Eri teknologiat (ks. kyvut)
+	Tiimipelaaja??
+	Hyvä energia??
+	Opiskelu
+	Yllätyksellisyys: viikset vaihtuu
+		</div>
 		</div>
 	</div>
 	
+
+<!-- footer -->
         <div id="footer" class="row">
 		<script src="scripts.js"></script>
         	Antti

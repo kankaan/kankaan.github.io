@@ -42,8 +42,47 @@ var instance = new Vue({
         workSamples: false,
         skills: false,
         philosophy: false,
-        title: "Etusivu"
+        workHistoryVirusScanner: false,
+        title: "Etusivu",
+        searchString: "",
+        books: [
+            {
+                "title": "Vuonna 1984",
+                "author": "George Orwell",
+                "description": "Dystopiakuvas. suosittelen",
+                "stars": 4
+            },
+            {
+                "title": "Uusi uljas maailma",
+                "author": "Huxley",
+                "description": "Dystopiakuvas. suosittelen",
+                "stars": 4
+            }
+        ]
 	},
+
+    computed: {
+        // A computed property that holds only those articles that match the searchString.
+        filteredBooks: function () {
+            var booksArray = this.books,
+                searchString = this.searchString;
+
+            if(!searchString){
+                return booksArray;
+            }
+
+            searchString = searchString.trim().toLowerCase();
+
+            bookArray = bookArray.filter(function(item){
+                if(item.title.toLowerCase().indexOf(searchString) !== -1){
+                    return item;
+                }
+            })
+
+            // Return an array with the filtered data.
+            return bookArray;
+        }
+    },
 
 	// Functions we will be using.
 	methods: {
