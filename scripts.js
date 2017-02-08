@@ -73,14 +73,17 @@ var instance = new Vue({
 
             searchString = searchString.trim().toLowerCase();
 
-            bookArray = bookArray.filter(function(item){
+            booksArray = booksArray.filter(function(item){
                 if(item.title.toLowerCase().indexOf(searchString) !== -1){
                     return item;
                 }
+				if(item.author.toLowerCase().indexOf(searchString) !== -1) {
+					return item;
+				}
             })
 
             // Return an array with the filtered data.
-            return bookArray;
+            return booksArray;
         }
     },
 
