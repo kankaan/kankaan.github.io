@@ -53,6 +53,12 @@ var readBooks = [
                 "description": "Perusteos ohjelmistotuotannosta. Tosi hyvää asiaa tiiviisti esitettynä",
                 "stars": 5
             },
+                        {
+                "title": "Sinuhe egyptiläinen",
+                "author": "Mika Waltari",
+                "description": "Suomen kenties parhaan kirjailijan pääteos. Huikea kuvaus muinaisesta Egyptistä.",
+                "stars": 5
+            },
         ];
 
 var instance = new Vue({
