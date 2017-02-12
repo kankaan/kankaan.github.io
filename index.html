@@ -67,7 +67,7 @@
                 		<li v-bind:class="{ active: hobbies }" ><a href="#" v-on:click="makeActive(2)">Harrastukset</a></li>
                 		<li v-bind:class="{ active: workSamples }" ><a href="#" v-on:click="makeActive(3)">Työnäytteet</a></li>
 				<li v-bind:class="{ active: skills }" ><a href="#" v-on:click="makeActive(4)" >Taidot</a></li>
-				<li v-bind:class="{ active: philosophy }" ><a href="#" v-on:click="makeActive(5)">Työ-filosofia</a></li>
+				<li v-bind:class="{ active: philosophy }" ><a href="#" v-on:click="makeActive(5)">Motivaatio</a></li>
 			</ul>
         	</div>
         	<div id="content" class="row">
@@ -103,12 +103,22 @@
 				emme päässet viemään prosessia eteenpäin. Tämän lisäksi keskityin myös tiimikavereiden auttamiseen. 
 				Juuri auttamishaluni vuoksi päädyinkin parantamaan vaatimustenhallintaa, sekä auttamaan tuntikirjausjärjetelmän parissa. 
 			</p>
+			<h3>Scrum ja ketterät menetelmät</h3>
 			<p>
-				Tiimissä oli käytössä SCRUM-menetelmä, jonka avulla työntekoa ohjattiin. 
+				Tiimissämme oli käytössä SCRUM-menetelmä, jonka avulla työntekoa ohjattiin. 
 				Mielestäni menelmä itsessän on toimiva, kunhan sen kättäjät osaavat soveltaa sitä käytäntöön.
 				Menetelmässä on hyvää se, että se pakottaa tiimiläiset kommunikoimaan keskenään.
-				Itse yritin tuoda stand-uppeihin 
+				Itse yritin tuoda stand-uppeihin lisämausteeksi, että puhevuorossa ollut kertoisi, enemmän kohtaamistaan ongelmista.
+				Näin ollen olisimme pystyneet keskittymään tiiminä paremmin esteiden poistamiseen. 
+				Ilman sitä stand up:it toimivat vain tulevan päivän ohjelman kertauksena. 
+				Mielestäni tämä ei riitä, vaan tiimiläisten tulee jakaa tietoa keskenään. 
+				Itse toimin pääasiassa tiimiläisenä Scrumissa, mutta pääsin myös testaamaan miltä tuntuu olla Scrum master.
+				Toimin kuukauden Scrum masterina. Tällöin sain mukavan positiivista palautetta tiimiläisiltä. 
+				Tämän lisäksi pääsin osallistumaan eräällä Agile42:n järjestämälle product owner sertifikaatti kurssille.
+				Näin ollen olen myös sertifioitu scrum product owner, mutta ikäväkseni joudun sanomaan, että kaikki asiat mitä kurssilla esitettiin
+				olivat minulle jo entuudestaan tuttuja. 
 			</p>
+			<h3>TFS</h3>
 			<p>
 				ABB:llä minulle tutuksi järjestelmäksi muodostui Microsoftin ALM järjestelmä Team Foundation Server (TFS).
 				TFS:ään kanssa minulla oli heti ensimmäisenä syksynäni isompi projekti menossa. Meillä oli käytössä Bugzilla bugien raportointiin ja hallinnointiin.
@@ -116,14 +126,14 @@
 				bugit järjestelmästä toiseen siten, että mitään tietoa ei katoa. Tämä osoittautui hitaammaksi työksi kuin olimme aluksi aavistelleet johtuen eri julkaisujankohdista.
 				Lopulta viimeisen projektin bugit siirrettiin TFS:ään vasta maaliskuussa.
 			</p>
-		  ABB
-		  - Scrum
-		  - Dippa
+			<p>
+				
+			</p>
 		  - bugimetriikat
-		  - kanban
 		  Projektityökurssi:
 		  gofore
 		  Saarioinen:
+		  <br><br>
 		<div class="well">
 		  <h3>Virusskannauspalvelu</h3>
 		  <button type="button" class="btn btn-default" v-on:click="workHistoryVirusScanner = true" v-show="!workHistoryVirusScanner">
@@ -167,6 +177,7 @@
 				Harrastan salibandya, patikointia ja kirjallisuutta, mikä on tällä hetkellä suosikkiharrastukseni.
 				Luen kirjallisuutta laidasta laitaan (etusivulta takasivulle, heh). Minua kiehtovat erilaiset tietokirjat,
 				koska niistä voi oppia jotain uutta. Tämän lisäksi olen tykästynyt erilaisiin maailmankirjallisuuden klassikoihin.
+				Näiden harrastusten lisäksi meillä on koira, joka esiintyy muun muassa sivuston karusellissa.
 			</p>
 			<p>	Klikkaa harrastustani, niin saat tietää enemmän. Kannattaa katsoa erityisesti kirjallisuus-sarake, jossa olen listannut lukemiani kirjoja ja niiden suosituksia.</p>
 
@@ -184,7 +195,9 @@
 					<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
      					<div class="panel-body">
         					Olen pelannut salibandya viitosluokalta lähtien. 
-							Ikävä kyllä muutamana viime vuotena en ole päässyt pelaamaan, koska työnteko sekä opiskelu ovat vieneet niin paljon aikaa
+							Ikävä kyllä muutamana viime vuotena en ole päässyt pelaamaan, 
+							koska työnteko sekä opiskelu ovat vieneet niin paljon aikaa. 
+							Tarkoituksena olisikin aloittaa uudestaan salibandyn peluu, koska laji itsessään tarjoaa mukavasti haastetta ja on hyvä tapa päästä kuntoon.
       					</div>
    					</div>
 			  </div>
@@ -200,7 +213,8 @@
     				</div>
     				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       					<div class="panel-body">
-							Harrastan 
+							Kävimme tyttöystäväni kanssa viime vuonna muutamaan otteeseen patikoimassa. 
+							Kävimme esimerkiksi kiertämässä Kurjenrahkan kansallispuiston ja Nuuksiossa useampaan otteeseen. 
      					</div>
     				</div>
   			</div>
@@ -217,9 +231,12 @@
     				<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
       					<div class="panel-body">
 								<p>									
-									Rakastan lukemista. Se on intohimoni.  
-									Tässä listaan joitain lukemiani kirjoja.
+									Olen rakastan lukemista jo pienestä pitäen. Luenkin nykyään lähes jatkuvasti kirjallisuutta laidasta laitaan. 
+									Alhaalla on lista joistakin lukemistani kirjoista. 
+										Lukeminen: klassikot, sijoituskirjallisuus, ohjelmistokirjallisuus
+
 								</p>
+								<br>
 								<input type="text" v-model="searchString" placeholder="rajaa:" />
 								<table class="table table-hover">
 									    <thead>
@@ -245,9 +262,6 @@
 			  </div>
 
 
-	Koira
-	Lukeminen: klassikot, sijoituskirjallisuus, ohjelmistokirjallisuus
-	Vinkkilista (sivupalkki)
 		</div>
 
 <!-- Skills -->
@@ -294,7 +308,8 @@
 <!-- Work samples -->
 		<div v-show="workSamples">
 		  <p>
-			  Olen tehnyt pieniä harrasteprojekteja.
+			  Olen tehnyt pieniä harrasteprojekteja. 
+			  Monia en ole viitsinyt pistää julkiseen jakoon, mutta esimerkiksi chatti ohjelma on saatavilla <a href="https://github.com/kankaan"> Githubista </a>
 		  </p>
 		  <p>
 			  Kaikista mielenkiintoisin harrasteprojekti liittyy nettiselainpelin, Travianin, automatisointiin.
@@ -315,18 +330,34 @@
 
 		  </p>
 		  <p>
+			  Innostuin ennen joulua testaamaan, miten websocketit toimivat. Tein pienimuotoisen Chat-applikaation niillä.
+			  Backendissä käytin Flaskia ja SQLAlchemya. Applikaatio on saatavilla Githubissa.
 		  </p>
-		  Chat
-		  tulevaa tuotantoa
+		  <p>
+			  Ennen joulua minulla oli tekeillä myös ohjelma, joka tutkii etuovi.fi:stä kaikki valitun alueen asunnot ja tallentaa ne tietokantaan.
+			  Pääsin tässä työssä alkuun ja tarkoituksena olisi tehdä vielä se toimivaan vaiheeseen, jotta voisin myöhemmin tarkastella myytäviä asuntoja ja vertailla niitä asuntojen hintatiedot -palvelun hintoihin.		  </p>
 		</div>
 
 <!-- philosophy -->	
 		<div v-show="philosophy">
+
+			<p>
+				Minua kiehtoo ohjelmistoissa 
+			</p>
+			<p>
+				Minua kiinnostaisi työskennellä alkuun full stack -kehittäjänä ja kokemuksen kertyessä ohjelmistojen tuotannossa
+				haluaisin työskennellä joko scrum masterin tai -product ownerin roolissa. 
+				Nämä roolit kiehtovat minua sillä, olen työskennellyt pitkään Scrum tyyppisesti ja käynyt monia keskusteluja eri ohjelmistotuotantomenelmien toiminnasta ja soveltamisesta.
+				
+			</p>
+			<p>
+				
+			</p>
+
+
 			filosofia
 			- Mitä haet
 	Tietotekniikkakäsitys: auttaa tietotekniikalla yhteiskuntaa, 	tehostaminen
-	Fullstack
-	Scrum, product owner
 	Vapaan lähdekoodin ohjelmistot
 
 - Mitä tuon
@@ -334,7 +365,6 @@
 	Tiimipelaaja??
 	Hyvä energia??
 	Opiskelu
-	Yllätyksellisyys: viikset vaihtuu
 		</div>
 		</div>
 	</div>

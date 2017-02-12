@@ -28,6 +28,33 @@ $(document).ready(function(){
     });
 });
 
+var readBooks = [
+            {
+                "title": "Vuonna 1984",
+                "author": "George Orwell",
+                "description": "Dystopiakuvas. suosittelen",
+                "stars": 4
+            },
+            {
+                "title": "Uusi uljas maailma",
+                "author": "Huxley",
+                "description": "Dystopiakuvas. suosittelen",
+                "stars": 4
+            },
+            {
+                "title": "Lean Software Development: An Agile Toolkit",
+                "author": "Mary & Tom Poppendieck",
+                "description": "Kirja kertoo Leanin menetelmistä ohjelmistotuotannossa. Hukan poistosta yms.",
+                "stars": 4
+            },
+            {
+                "title": "Ohjelmistotuotannon käytännöt",
+                "author": "Ilkka Haikala, Tommi Mikkonen",
+                "description": "Perusteos ohjelmistotuotannosta. Tosi hyvää asiaa tiiviisti esitettynä",
+                "stars": 5
+            },
+        ];
+
 var instance = new Vue({
 	
 	// A DOM element to mount our view model.
@@ -45,20 +72,7 @@ var instance = new Vue({
         workHistoryVirusScanner: false,
         title: "Etusivu",
         searchString: "",
-        books: [
-            {
-                "title": "Vuonna 1984",
-                "author": "George Orwell",
-                "description": "Dystopiakuvas. suosittelen",
-                "stars": 4
-            },
-            {
-                "title": "Uusi uljas maailma",
-                "author": "Huxley",
-                "description": "Dystopiakuvas. suosittelen",
-                "stars": 4
-            }
-        ]
+        books: readBooks
 	},
 
     computed: {
