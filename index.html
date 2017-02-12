@@ -122,17 +122,14 @@
 			<p>
 				ABB:llä minulle tutuksi järjestelmäksi muodostui Microsoftin ALM järjestelmä Team Foundation Server (TFS).
 				TFS:ään kanssa minulla oli heti ensimmäisenä syksynäni isompi projekti menossa. Meillä oli käytössä Bugzilla bugien raportointiin ja hallinnointiin.
-				Mutta kun otimme TFS:n käyttöön, niin kaikista järkevintä oli siirtää bugien hallinnointi TFS:ään. Minun tehtäväni tässä urakassa oli <b> mapata </b>
-				bugit järjestelmästä toiseen siten, että mitään tietoa ei katoa. Tämä osoittautui hitaammaksi työksi kuin olimme aluksi aavistelleet johtuen eri julkaisujankohdista.
+				Mutta kun otimme TFS:n käyttöön, niin kaikista järkevintä oli siirtää bugien hallinnointi TFS:ään. Minun tehtäväni tässä urakassa oli siirtää
+				bugit järjestelmästä toiseen siten, että mitään tietoa ei katoa. Tämä osoittautui hitaammaksi työksi kuin olimme aluksi aavistelleet johtuen projektien julkaisujankohdista.
 				Lopulta viimeisen projektin bugit siirrettiin TFS:ään vasta maaliskuussa.
 			</p>
 			<p>
 				
 			</p>
-		  - bugimetriikat
-		  Projektityökurssi:
-		  gofore
-		  Saarioinen:
+
 		  <br><br>
 		<div class="well">
 		  <h3>Virusskannauspalvelu</h3>
@@ -269,8 +266,9 @@
 			<p>
 		Tässä muutamia tekniikoita, joita olen opiskellut. </p>
 
-		<p>
-  		C++ oli ensimmäinen tuttavuuteni ohjelmoinnin maailmasta. Sitä opetettiin TTY:llä meille ensimmäisenä ohjelmointikielenä. 
+			<p>
+  			C++ oli ensimmäinen tuttavuuteni ohjelmoinnin maailmasta. Sitä opetettiin TTY:llä meille ensimmäisenä ohjelmointikielenä. 
+			
 		
 		  </p>
 		  <p>
@@ -281,6 +279,8 @@
 		  Tämän lisäksi, että Python on helppokäyttöinen, on se myös suosittu kieli. 
 		  Sen vuoksi moneen kirjastoon löytyykin Python toteutus.
 		  </p>
+
+		  <h3> Javascript </h3>
 			<p>
 			Javascript on kielenä erittäin mielenkiintoinen tapaus. Parhaiten pääsinkin tutustumaan siihen TTY:n projektityökurssilla, 
 			jossa teimme datan visualisointiin nettisivun (Matta).
@@ -290,16 +290,19 @@
 			  Sen vuoksi jouduimmekin hakemaan ensiksi kaikki käyttäjät ja sitten hakemaan jokaiselle käyttäjälle hänen taitonsa.
 			  Tämä olikin opettavaista. Opin esimerkiksi kantapään kautta sen, että javascript on asynkroninen kieli ja koodissa tapahtuu hämmentäviä asioita, jos en ota sitä huomioon.
 			  <br>
-			  Matta toteuttettiin Angular 1:llä, joten 
-			  frameworkit: angular.js ja vue.js.
-			 <p>
-			 Näiden sivujen myötä tutustuin Vue.js-frameworkkiin. Vue on 
-			  Vue.js:n tutustuin näiden sivujen myötä. Framework on melko uusi, mutta saavuttanut lyhyessä ajassa suuren suosion.
-			</p>
+			  Matta toteuttettiin Angular 1:llä, joten kyseinen framework tuli minulle tutuksi. 
+			  Angularin lisäksi olenkin opiskellut Vue.js-frameworkkia. Tämä ohjelmointikehys on melko uusi, mutta saavuttanut siitä huolimatta suuren suosion.
+			  Tämän suuren suosion vuoksi päätin kokeilla kyseistä kirjastoa näillä sivuilla. Esimerkiksi sivujen navigaatio on tehty Vue:n avulla, sekä harrastukset sivun lista ja sen rajaaminen.
 
 		  </p>
+
+		  <h3> C# </h3>
 		  <p>
-			  Edellä mainittujen lisäksi olen tutustunut myös C#:n. C#:a olen käyttänyt niin TTY:n kurssilla, jossa teimme seikkailupelin kuin myös ABB:llä.
+			  Edellä mainittujen lisäksi olen tutustunut myös C#:n. 
+			  C#:a olen käyttänyt niin TTY:n kurssilla, jossa teimme vuoropohjaisen seikkailupelin, kuin myös ABB:llä. 
+			  ABB:llä tein työhistoria-sivulta löytyvän virusskannauspalvelun nettitoteutuksen. 
+			  Tämän lisäksi refaktoroin ohjelman, joka kuunteli TFS:n lähettämiä SOAP-viestejä ja lähetti niiden perusteella sähköpostia tiettyjen muutoksien tapahtuessa TFS:ssä.
+			  Tämän lisäksi laadin ohjelman, joka siirtää Excelistä dataa TFS:än. Tämä ohjelma tein vaatimustenhallinta-projektin tarpeisiin.
 
 		  </p>
 
@@ -311,17 +314,20 @@
 			  Olen tehnyt pieniä harrasteprojekteja. 
 			  Monia en ole viitsinyt pistää julkiseen jakoon, mutta esimerkiksi chatti ohjelma on saatavilla <a href="https://github.com/kankaan"> Githubista </a>
 		  </p>
+		  <h3>Nettiselain pelin automatisointi</h3>
+		  
 		  <p>
 			  Kaikista mielenkiintoisin harrasteprojekti liittyy nettiselainpelin, Travianin, automatisointiin.
 			  Pelissä menestyäkseen täytyy olla koneen ääressä yötä päivää. Tämä käy kuitenkin pitemmän päälle hienman rasittavaksi,
 			  joten päätin, että yritän automatisoida pelin eniten aikaa kuluttavimman elementin, ryöstelyn.
 			  Minulla oli hieman vaikeuksia päättää, että miten teen tämän automatisoinnin. Teenkö sen pelkästään http-requesteilla vai miten sen toteutan?
 			  Tulin kuitenkin tulokseen, että sivulla on javascriptiä, jota saattaa vaikuttaa pelin suorittamiseen.
-		  </p>
-		  <p>
+		  <br>
 			  Näin ollen päädynkin siihen lopputulokseen, että kaikista parasta on automatisoida selaimen toiminta. 
-			  Sen hoidin käyttämällä Seleniumia. Selenium
+			  Sen hoidin käyttämällä Seleniumia. Selenium itsessään on tosi helppokäyttöinen työkalu. Kyseinen työkalu on minun Bitbucket repossani, 
+			  mutta se ei ole yleisessä jaossa.
 		  </p>
+		  
 		  <p>
 			  ABB:llä olen ollut osallisena projektissa, joka suunnitteli ja toteutti työkalun, 
 			  jolla skannataan toimitettavat softapaketit virusten varalta. Tämän työkalun toteutin yhdessä toisen harjoittelijan kanssa, 
@@ -329,42 +335,41 @@
 			  Itse vastasin nettisivuista, josta skanneriohjelmisto käynnistettiin.
 
 		  </p>
+		  <h3>Chat</h3>
 		  <p>
 			  Innostuin ennen joulua testaamaan, miten websocketit toimivat. Tein pienimuotoisen Chat-applikaation niillä.
 			  Backendissä käytin Flaskia ja SQLAlchemya. Applikaatio on saatavilla Githubissa.
 		  </p>
+		  <h3>Hakurobotti</h3>
 		  <p>
 			  Ennen joulua minulla oli tekeillä myös ohjelma, joka tutkii etuovi.fi:stä kaikki valitun alueen asunnot ja tallentaa ne tietokantaan.
-			  Pääsin tässä työssä alkuun ja tarkoituksena olisi tehdä vielä se toimivaan vaiheeseen, jotta voisin myöhemmin tarkastella myytäviä asuntoja ja vertailla niitä asuntojen hintatiedot -palvelun hintoihin.		  </p>
+			  Pääsin tässä työssä alkuun ja tarkoituksena olisi tehdä vielä se toimivaan vaiheeseen, jotta voisin myöhemmin tarkastella myytäviä asuntoja ja vertailla niitä asuntojen hintatiedot -palvelun hintoihin.
+			  Olen aloittanut projektin koodaamisen Pythonilla, joka on minulle valmiiksi tuttu kieli ja sisältää paljon hyviä kirjastoja.
+			  Tässä työssä olen käyttänyt minulle hyvin tutuksi tullutta BeautifulSoup sekä Request -kirjastoja. 
+		  </p>
 		</div>
 
 <!-- philosophy -->	
 		<div v-show="philosophy">
 
 			<p>
-				Minua kiehtoo ohjelmistoissa 
+				Ohjelmoinnissa minua motivoi lopulta se, että sillä voi tehdä niin paljon kaikkea ja se erityisesti se, 
+				että ohjelmointi tarjoaa mukavan haastavia pähkinöitä purtavaksi. Usein koodatessani unohdankin ajankulum totaalisesti.
+			</p>
+			<p>
+				Ohjelmointi on mielestäni parhainta tiimipelinä, jossa kaikille on määritelty tietyt vastuualueet / tehtävät.
+				Minusta onkin palkitsevaa saada tehtyä uusi ominaisuus ohjelmaan, kuin auttaa tiimikaveria suorittamaan oman tehtävänsä.
 			</p>
 			<p>
 				Minua kiinnostaisi työskennellä alkuun full stack -kehittäjänä ja kokemuksen kertyessä ohjelmistojen tuotannossa
 				haluaisin työskennellä joko scrum masterin tai -product ownerin roolissa. 
 				Nämä roolit kiehtovat minua sillä, olen työskennellyt pitkään Scrum tyyppisesti ja käynyt monia keskusteluja eri ohjelmistotuotantomenelmien toiminnasta ja soveltamisesta.
-				
 			</p>
+			<h3>Opiskelu</h3>
 			<p>
-				
+				Olen opiskellut ohjelmistotuotantoa TTY:llä pääaineenani. Tämän lisäksi sivuaineinani ovat teollisuustalous ja tietojohtaminen.
+				Toivon näiden sivuaineideni avulla ymmärtäväni paremmin ohjelmiston käyttäjien ja hankkijoiden tarpeita.  
 			</p>
-
-
-			filosofia
-			- Mitä haet
-	Tietotekniikkakäsitys: auttaa tietotekniikalla yhteiskuntaa, 	tehostaminen
-	Vapaan lähdekoodin ohjelmistot
-
-- Mitä tuon
-	Eri teknologiat (ks. kyvut)
-	Tiimipelaaja??
-	Hyvä energia??
-	Opiskelu
 		</div>
 		</div>
 	</div>
@@ -373,7 +378,7 @@
 <!-- footer -->
         <div id="footer" class="row">
 		<script src="scripts.js"></script>
-        	Antti
+        	Antti Design
 	</div>
     </div>
     <div class="col-md-3"></div>
