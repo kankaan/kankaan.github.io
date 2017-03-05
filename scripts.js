@@ -32,19 +32,19 @@ var readBooks = [
             {
                 "title": "Vuonna 1984",
                 "author": "George Orwell",
-                "description": "Dystopiakuvas. suosittelen",
+                "description": "Klassinen dystopiakuvaus, jonka yhteiskuntakuvaus muistuttaa merkittävästi myös omaa aikaamme.",
                 "stars": 4
             },
             {
                 "title": "Uusi uljas maailma",
                 "author": "Huxley",
-                "description": "Dystopiakuvas. suosittelen",
+                "description": "Ihmisten luokkajakoa pohtiva dystopiakuvaus.",
                 "stars": 4
             },
             {
                 "title": "Lean Software Development: An Agile Toolkit",
                 "author": "Mary & Tom Poppendieck",
-                "description": "Kirja kertoo Leanin menetelmistä ohjelmistotuotannossa. Hukan poistosta yms.",
+                "description": "Kirja kertoo Lean-menetelmistä, kuten hukan poistosta, ohjelmistotuotannossa.",
                 "stars": 4
             },
             {
@@ -56,7 +56,7 @@ var readBooks = [
                         {
                 "title": "Sinuhe egyptiläinen",
                 "author": "Mika Waltari",
-                "description": "Suomen kenties parhaan kirjailijan pääteos. Huikea kuvaus muinaisesta Egyptistä.",
+                "description": "Suomen kenties parhaan kirjailijan pääteos. Huikea, mukaansatempaava kuvaus muinaisesta Egyptistä.",
                 "stars": 5
             },
         ];
@@ -74,8 +74,9 @@ var instance = new Vue({
         hobbies: false,
         workSamples: false,
         skills: false,
-        philosophy: false,
+        workHistory: false,
         workHistoryVirusScanner: false,
+        me: false,
         title: "Etusivu",
         searchString: "",
         books: readBooks
@@ -113,38 +114,30 @@ var instance = new Vue({
 			// When a model is changed, the view will be automatically updated.
 			this.activeName = item;
             this.home = false;
-            this.workHistory = false;
             this.hobbies = false;
-            this.workSamples = false;
             this.skills = false;
-            this.philosophy = false;
+            this.me = false;
+            this.workHistory =false;
             switch (item) {
                 case 0:
                     this.home = true;
-                    this.title = "Etusivu";
-                    $("#Carousel").carousel(1)
+                    this.title = "";
+                    $("#Carousel").carousel(3)
                     break;
                 case 1:
                     this.workHistory = true;
-                    this.title = "Työhistoria";
+                    this.title = "Työhistoriani";
                     $("#Carousel").carousel(2)
                     break;
                 case 2:
-                    this.hobbies = true;
-                    this.title = "Harrastukset";
-                    $("#Carousel").carousel(1);
+                    this.me = true;
+                    this.title = "Minusta";
+                    $("#Carousel").carousel(4);
                     break;
                 case 3:
-                    this.workSamples = true;
-                    this.title = "Työnäytteet";
-                    break;
-                case 4:
                     this.skills = true;
-                    this.title = "Taidot";
-                    break;
-                case 5:
-                    this.philosophy = true;
-                    this.title = "Työ-filosofia";
+                    this.title = "Taidot & Työnäytteet";
+                     $("#Carousel").carousel(1);
                     break;
                 default:
                     break;

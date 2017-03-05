@@ -21,28 +21,31 @@
 
 		  <div id="Carousel" class="carousel slide">
     <!-- Indicators -->
+	<!--
     <ol class="carousel-indicators">
       <li class="item1 active"></li>
       <li class="item2"></li>
       <li class="item3"></li>
     </ol>
-
+		-->
 	   <div class="carousel-inner" role="listbox">
-	      	<div class="item active">
-    	    		<img src="inge1.jpg" alt="Inge1" width="460" height="345">
+	      	<div class="item">
+    	    		<img src="inge1_shrink.jpg" alt="Inge1" width="460" height="345">
 				  	<div class="carousel-caption">
-   					 <h3></h3>
-    				<p></p>
   					</div>
       		</div>
-
-	<div class="item">
-        <img src="hylly.jpg" alt="Hylly" width="460" height="345">
-    </div>
-
-	<div class="item">
-		<img src="inge2.jpg" alt="Inge2" width="460" height="345">
-	</div>
+		<div class="item">
+    	    <img src="hylly.jpg" alt="Hylly" width="460" height="345">
+   	 	</div>
+		<div class="item">
+			<img src="inge2.jpg" alt="Inge2" width="460" height="345">
+		</div>
+		<div class="item active">
+			<img src="Antti3.jpg" alt="Antti" width="460" height="345">
+		</div>
+		<div class="item">
+			<img src="Antti2.jpg" alt="Antti" width="460" height="345">
+		</div>
 
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#Carousel" role="button" data-slide="prev">
@@ -63,11 +66,9 @@
            		<ul id="navigationbar" class="nav nav-tabs"
 		         v-on:click.prevent>
                			 <li v-bind:class="{ active: home }" ><a href="#" v-on:click="makeActive(0)">Etusivu</a></li>
-                		<li  v-bind:class="{ active: workHistory }" ><a href="#"  v-on:click="makeActive(1)">Työhistoria</a></li>
-                		<li v-bind:class="{ active: hobbies }" ><a href="#" v-on:click="makeActive(2)">Harrastukset</a></li>
-                		<li v-bind:class="{ active: workSamples }" ><a href="#" v-on:click="makeActive(3)">Työnäytteet</a></li>
-				<li v-bind:class="{ active: skills }" ><a href="#" v-on:click="makeActive(4)" >Taidot</a></li>
-				<li v-bind:class="{ active: philosophy }" ><a href="#" v-on:click="makeActive(5)">Motivaatio</a></li>
+                		<li  v-bind:class="{ active: me }" ><a href="#"  v-on:click="makeActive(2)">Minusta</a></li>
+                		<li v-bind:class="{ active: workHistory }" ><a href="#" v-on:click="makeActive(1)">Työhistoria</a></li>
+				<li v-bind:class="{ active: skills }" ><a href="#" v-on:click="makeActive(3)" >Taidot</a></li>
 			</ul>
         	</div>
         	<div id="content" class="row">
@@ -77,54 +78,97 @@
             		</div>
 <!-- Frontpage -->
         <div v-show=" home">
-			<h5 >Tervetuloa kotisivuilleni!</h5>
-			<p>
-			Olen 28-vuotias ohjelmoijanalku, jonka sydän sykkii puujalkahuumorille, jonka pikkurillin on vienyt Python 
-			ja jonka jalat vievät juuri Teidän firmaanne. 
-			Näillä kotisivuilla kerron itsestäni, taidoistani ja kokemuksistani. Hauska tutustua! 
-			</p> 
-			Antti K
+			<h4 >Tervetuloa kotisivuilleni!</h4>
+
+			<div id="meetingCard" class="row">
+				<div id="meetingCardImage" class="col-sm-4">
+				<img src="latyt.jpg" id="latty" alt="Antti" align="left"  >
+				</div>
+		
+				<div id="meetingCardTexts" class="col-sm-8">
+					<p>
+						Näillä kotisivuillani kerron hieman itsestäni ja taidoistani. Ollaanhan yhteyksissä!
+					</p>
+				 
+					<div id="address">
+					<span>Antti K</span>
+					<br>
+			 			040 835 6893 
+						 <br>
+					antti.kankaanranta@gmail.com
+					</div>
+				</div>
+			</div>
+
 		</div>
 
 
 <!-- WorkHistory -->
 		<div v-show="workHistory">
+
 			<p>
-				Tällä hetkellä teen diplomityötä ABB:lle aiheesta taajuusmuuttaja tietoturva. 
-				Diplomityö pitää sisällään uhkamallin teon taajuusmuuttajalle ja suositukset, 
-				miten kyberturvallisuutta voidaan parantaa tulevaisuudessa.
+				
+				Työhistoriani alkoi lukion jälkeen, jolloin työskentelin Huittisten Saarioisilla ennen ja jälkeen armeijan.
+				Muutettuani opiskelemaan Tampereelle ensimmäiset opiskelukesäni kuluivat vuorostaan Saarioisten Sahalahden tehtaalla. Elinikäistä elintarviketyöläistä minusta ei tullut, 
+				mutta opin saarioislaisena monia kullanarvoisia taitoja: säntillisyyttä, työkavereiden huomioimista ja ymmärrystä tehtaasta systeeminä.
+				
 			</p>
 			<p>
-				Olen työskennellyt ABB:n pitäjänmäen konttorissa yhtäjaksoisesti toukokuusta 2014 alkaen. 
-				Kesät täysipäiväisenä työntekijänä ja loput vuodesta osa-aikaisena, pari päivää viikossa.
-				ABB:llä työskentelin tuotekehitysprosesseja kehittävässä tiimissä. Vastuualueenani oli ABB Drivesin
-				 <b>ohjelmistokehitys prosessien kehittäminen </b>
-				yhdessä kollegani kanssa. Kyseisenä aikana eksyin myös vaatimustenhallinnan pariinkin, mutta resurssien puutten vuoksi,
-				emme päässet viemään prosessia eteenpäin. Tämän lisäksi keskityin myös tiimikavereiden auttamiseen. 
-				Juuri auttamishaluni vuoksi päädyinkin parantamaan vaatimustenhallintaa, sekä auttamaan tuntikirjausjärjetelmän parissa. 
+				Viimeiset kolme vuotta olen työskennellyt Pitäjänmäen ABB:llä. Kahden harjoitteluvuoden jälkeen siirryin diplomityöntekijäksi.
+				<b>Diplomityöni aiheena on taajuusmuuttajien tietoturva. </b>
+				Työni sisältää uhkamallin taajuusmuuttajille ja suositukset, 
+				kuinka taajusmuuttajien kyberturvallisuutta voidaan parantaa tulevaisuudessa. <br>
+				Työ on loppusilausta vaille valmis.
 			</p>
+			<p>
+				<h2>Työnkuvat </h2>
+				<br>
+				Ennen diplomityöni aloittamista työskentelin ABB Drives:n tuotekehitysprosesseja kehittävässä tiimissä. 
+				Vastuualueenani oli kehittää kollegani kanssa ohjelmistokehitysprosesseja. Järjestimme testauksen koulutuksia, raportoimme esimerkiksi 
+				bugimetriikkaa ja yritimme yhtenäistää julkaisuprosessia.
+				Ohjelmistoprosessien kehittämisen lomassa autoin myös muita tiimimme jäseniä heidän tehtävissään.
+				Näin pääsin testaamaan hieman <b>tuntikirjausjärjestelmää</b> ja auttamaan <b>vaatimustenhallinnan</b> parissa.
+			</p>
+
 			<h3>Scrum ja ketterät menetelmät</h3>
 			<p>
-				Tiimissämme oli käytössä SCRUM-menetelmä, jonka avulla työntekoa ohjattiin. 
-				Mielestäni menelmä itsessän on toimiva, kunhan sen kättäjät osaavat soveltaa sitä käytäntöön.
-				Menetelmässä on hyvää se, että se pakottaa tiimiläiset kommunikoimaan keskenään.
-				Itse yritin tuoda stand-uppeihin lisämausteeksi, että puhevuorossa ollut kertoisi, enemmän kohtaamistaan ongelmista.
-				Näin ollen olisimme pystyneet keskittymään tiiminä paremmin esteiden poistamiseen. 
-				Ilman sitä stand up:it toimivat vain tulevan päivän ohjelman kertauksena. 
-				Mielestäni tämä ei riitä, vaan tiimiläisten tulee jakaa tietoa keskenään. 
-				Itse toimin pääasiassa tiimiläisenä Scrumissa, mutta pääsin myös testaamaan miltä tuntuu olla Scrum master.
-				Toimin kuukauden Scrum masterina. Tällöin sain mukavan positiivista palautetta tiimiläisiltä. 
-				Tämän lisäksi pääsin osallistumaan eräällä Agile42:n järjestämälle product owner sertifikaatti kurssille.
-				Näin ollen olen myös sertifioitu scrum product owner, mutta ikäväkseni joudun sanomaan, että kaikki asiat mitä kurssilla esitettiin
-				olivat minulle jo entuudestaan tuttuja. 
+				Tiimimme käytti toiminnanohjausmenetelmänään Scrum-menetelmää, ja toimin itse kuukauden ajan Scrum Masterina. Pesti tuntui äärimmäisen tärkeältä:
+				 varmistetaanhan siinä, että tiimi saa toimia kitkattomasti. Mielestäni Scrum on menetelmänä toimiva ja käytännössä sitä voidaan soveltaa oikeastaan kaikkeen tiimityöhön. Se
+				pakottaa tiimiläiset kommunikoimaan keskenään joka aamu eikä päällekkäisyyksiä pääse syntymään.
+				Lisäksi jonkun tiimiläisen ongelma saattaa olla juurikin se sama, jonka toinen tiimiläinen on ratkaissut päivää aikaisemmin.
+				</p>
+				<p> 
+				Pidän Scrumissa erityisesti sprinttien katselmoinnista, koska sen avulla voidaan välittää tehokkaasti tietoa ja 
+				vakiinnuttaa onnistuneita toimintatapoja. Pidän itse myös erityisen tärkeänä sitä, että 
+				stand up -tapaamisissa tuotaisiin kohdattuja ongelmia reippaasti esiin eikä tapaamista käytettäisi 
+				vain tulevan päivän ohjelman kertauksena tai raportointina esimiehelle. 
+				</p>
+				<p>
+				Sain toiminnastani mukavan positiivista palautetta muilta tiimiläisiltä.
+				<b>"Kyllä sä olet paras Scrum Master" </b>tokaisi eräs tiimiläinen. 
+				(Tähän saattoi tosin vaikuttaa myös se, että tilasin sprintin suunnittelupalaveriin leivät ja kahvit kaikille...)
 			</p>
+			<p>
+				Scrum Master -kokemuksen lisäksi olen myös <b>sertifioitu Scrum Product Owner.</b>
+			</p>
+			<p>
+				
+				
+			</p>
+			<p>
+				
+				
+			
+			</p>
+
 			<h3>TFS</h3>
 			<p>
-				ABB:llä minulle tutuksi järjestelmäksi muodostui Microsoftin ALM järjestelmä Team Foundation Server (TFS).
-				TFS:ään kanssa minulla oli heti ensimmäisenä syksynäni isompi projekti menossa. Meillä oli käytössä Bugzilla bugien raportointiin ja hallinnointiin.
-				Mutta kun otimme TFS:n käyttöön, niin kaikista järkevintä oli siirtää bugien hallinnointi TFS:ään. Minun tehtäväni tässä urakassa oli siirtää
-				bugit järjestelmästä toiseen siten, että mitään tietoa ei katoa. Tämä osoittautui hitaammaksi työksi kuin olimme aluksi aavistelleet johtuen projektien julkaisujankohdista.
-				Lopulta viimeisen projektin bugit siirrettiin TFS:ään vasta maaliskuussa.
+				Pääsin heti ABB-urani alussa tositoimiin Microsoftin ALM-järjestelmä Team Foundation Serverin (TFS) kanssa, johon
+				yksikkömme päätti siirtyä. Aikaisemmin bugit oli tallennettu Bugzillaan, mutta nyt TFS:n myötä bugit päätettiin siirtää sinne.
+				Bugeja oli kertynyt jo aika liuta Bugzillaan ja tuotteen modulaadisuuden ja monimutkaisuuden vuoksi Bugzillan rakenne
+				 ei ollut siirrettävissä suoraan TFS:än.<b> Vastasin bugien siirrosta uuteen järjestelmään, ja lisäksi opetin projektipäällikölle,
+				miten TFS:ää käytetään </b>
+	
 			</p>
 			<p>
 				
@@ -132,51 +176,97 @@
 
 		  <br><br>
 		<div class="well">
-		  <h3>Virusskannauspalvelu</h3>
+		  <h3>Virusskanneripalvelu</h3>
 		  <button type="button" class="btn btn-default" v-on:click="workHistoryVirusScanner = true" v-show="!workHistoryVirusScanner">
 			   <span class="glyphicon glyphicon-plus"></span>
 		  </button>
 		  <div id="virusScanner" v-show="workHistoryVirusScanner">
 		  <p>
-			Toinen mielenkiintoinen projekti ABB:llä syntyi, kun saimme firman laajuiset tietoturvamääräykset.
-			Eräs kohta näissä määräyksissä oli, että julkaistava softa oli skannattava vähintään kolmella eri virusskannerilla.
-			Tämä vaatimus oli pyörinyt jonkin aikaa tiimimme Kanban taululla, kun minä lopulta päätin, että minä hoidan tämän tehtävän.
-			Aluksi aloitin keskustelut eri softatiimien kanssa ja sain selville, että eräässä toisessakin tiimissä oltiin puuhaamassa vastaavaa työtä.
-			Tosin tämä työ oli ollut suunnitteilla lähinnä heidän omaan käyttöönsä ja piti sisällään lähinnä erilaisia powershell skriptejä.
-			Tällöin toteutus ei olisi hyödyttänyt muita tiimejä, joten päätimme yhdistä voimamme ja otimme pienen aikalisän. 
+			Toinen mielenkiintoinen projektini ABB:llä liittyi siihen, kun saimme firman laajuiset tietoturvamääräykset.
+			Eräs kohta näissä määräyksissä oli, että julkaistava softa olisi skannattava vähintään kolmella eri virusskannerilla.
+			Tämä vaatimus oli pyörinyt jonkin aikaa tiimimme Kanban-taululla, kun lopulta päätin, että minä hoidan tämän tehtävän.
+			Tehtävän suorittaminen vaati ensinnäkin <b> organisaation sisäistä koordinointia ja viestintää </b> . Otin yhteyttä muihin Pitäjänmäen
+			softatiimeihin ja järjestin yhteyksiä Vaasan toimipisteeseen. Sieltä löytyi kuin löytyikin myös meidän toimipisteellemme
+			sopiva järjestelmä. <b> Minä loin järjestelmään nettikäyttöliittymän C#:lla ja ASP.Net:llä.</b> 
 		  </p>
 		  <p>
-			  Pohdimme, että järkevintä olisi selvittää, että mitä muualla firmassa tehdään, koska kyseessä oli koko firmaa koskeva määräys.
-			  Niinpä otimme yhteyttä Vaasaan, että onko heillä olemassa jo jonkinnäköinen ratkaisu kyseiseen ongelmaan. Useita puheluita myöhemmin kävi ilmi, 
-			  että kyllä heillä oli! Otimme yhteyttä kehittäjään ja kysyimme aluksi, että olisiko meidän ollut mahdollista liittyä heidän järjestelmäänsä?
-			  Kehittäjä sanoi, että ei ole, koska sitten ylläpitovastuu lankeaisi hänelle. Hän lupasi kuitenkin toimittaa meille lähdekoodin järjestelmästä, jota voisimme käyttää vapaasti.
-			  Tutustuttuamme lähdekoodiin tulimme siihen tulokseen, että kyseessä oli hyvä toteutus ja asennamme sen omalle serverillemme toimimaan.
-			  Ympäristön vaihtuminen Linuxista Windowsiin ei tuonut sen suurempia haasteita, mutta sitten päätimme toteuttaa vielä nettikäyttöliittymän työkaluun.
-			  Minä vastasin siitä ja toteutin sen luonnollisesti C#:lla ja ASP.Net:llä.
-		  </p>
-		  <p>
-			  Kun palvelu oli saatu toimimaan, oli sen tarkoitus toimia väliaikaisena ratkaisuna oman väen keskuudessa.
+			Kun palvelu oli saatu toimimaan, oli sen tarkoitus toimia väliaikaisena ratkaisuna vain oman väen keskuudessa.
 			  Kuitenkin kävi, niin että huhut alkoivat liikkua ja Saksasta ja Englannista osoitettiin kiinnostusta työkalua kohtaan.
-			  Näin ollen järjestelmä tuli paljon suuremmalle käytölle kuin aluksi oli ajateltu.
+			  Näin ollen järjestelmä tuli paljon suuremmalle käytölle kuin aluksi oli ajateltu. <b> Oma-aloitteisuuteni tuotti siis firmallemme lopulta globaalin ratkaisun.</b>
 		  </p>
 		  	<button type="button" class="btn btn-default" v-on:click="workHistoryVirusScanner = false" v-show="workHistoryVirusScanner">
 			   <span class="glyphicon glyphicon-minus"></span>
 		  </button>
 		  </div>
 		</div>
+
+
 		</div>
 
 
 <!--- Hobbies -->
-		<div v-show="hobbies">
-
+		<div v-show="me">
+			<!-- philosophy -->	
 			<p>
-				Harrastan salibandya, patikointia ja kirjallisuutta, mikä on tällä hetkellä suosikkiharrastukseni.
-				Luen kirjallisuutta laidasta laitaan (etusivulta takasivulle, heh). Minua kiehtovat erilaiset tietokirjat,
-				koska niistä voi oppia jotain uutta. Tämän lisäksi olen tykästynyt erilaisiin maailmankirjallisuuden klassikoihin.
-				Näiden harrastusten lisäksi meillä on koira, joka esiintyy muun muassa sivuston karusellissa.
+					Olen vuonna 1989 syntynyt, Huittisista kotoisin oleva ohjelmoijanalku. 
+					Pääsin Tampereen teknilliseen yliopistoon opiskelemaan tietotekniikkaa vuonna 2010.
+					 Päivääkään en ole sen jälkeen miettinyt alanvaihtoa. Tietotekniikka on minun juttuni.
+					
 			</p>
-			<p>	Klikkaa harrastustani, niin saat tietää enemmän. Kannattaa katsoa erityisesti kirjallisuus-sarake, jossa olen listannut lukemiani kirjoja ja niiden suosituksia.</p>
+			<h3>Luonteeni</h3>
+			<p>
+				Luonteeltani olen ystävällinen, avulias ja puujalkahumoristi. 
+				Humoristisuuttani hyödynnän työpaikalla ilmapiirin keventämisessä, mutta osaan tarvittaessa myös hillitä piirrettäni tilanteen 
+				vaatimalla tavalla. Osaan vakavoitua ja katsoa asioita kriittisesti ja eri näkökulmista. 
+				
+			</p>
+
+			<h3>Opiskelu</h3>
+			<p>
+				TTY:llä pääaineenani on ohjelmistotuotanto, jossa minua erityisesti  kiinnostaa 
+				tällä hetkellä nettidevaaminen. 
+				
+			
+				 Sivuaineinani ovat puolestaan teollisuustalous ja tietojohtaminen. Ne ovat tukeneet oman asiantuntijuuteni kehittymisessä minua eri tavoin. 
+				 Tietojohtamisen myötä olen oppinut sitä, miten tietoa tuodaan käyttäjälle esille: tiedon havainnollistamista.  
+				 Teollisuustaloudessa olen päässyt pohtimaan esimerkiksi johtamista ja markkinointia. Molempien sivuaineideni myötä 
+				 olen mielestäni oppinut ajattelemaan ohjelmointia nimenomaan asiakkaan kannalta.
+				
+			</p>
+			<p>
+				
+			</p>
+
+			<h3>Ajatuksia ohjelmoinnista</h3>
+			<p>
+				Ohjelmoinnissa minua motivoi se, miten siinä yhdistyy haastavuus ja palkitsevuus.
+				Ohjelmointi tarjoaa mukavan haastavia pähkinöitä purtavaksi, joiden ratkominen koukuttaa minua.
+				 Usein koodatessani unohdankin ajankulun totaalisesti.
+			</p>
+			<p>
+				Vaikka voin itse keskittyä koodaamiseen intensiivisesti, ohjelmointi luonnistuu mielestäni kuitenkin parhaiten tiimissä. Paras tiimi 
+				on sellainen, jossa jokaisen osaamista arvostetaan ja osataan hyödyntää ja jossa jokainen jäsen on valmis auttamaan muita.
+				Tällöin yhteisen tavoitteen saavuttaminen helpottuu, kun tiimiläisiltä voi kysyä apua vaikeissa paikoissa.
+				Vastavuoroisesti ystäviä on mukava auttaa onnistumaan.
+			</p>
+			<p>
+				Minua kiinnostaisi työskennellä alkuun full stack -kehittäjänä, koska haluan saada monipuolista kokemusta eri työnkuvista. 
+				Kun olen kerryttänyt kokemusta, haaveilen Scrum Masterina tai Product Ownerina työskentelystä.
+				Nämä roolit kiehtovat minua, koska olen työskennellyt pitkään Scrum-menetelmää käyttäen ja löytänyt siitä kahvipöytäkeskustelujeni vakioaiheen.
+				
+			</p>
+
+
+			<h3>Harrastukseni</h3>
+			<p>
+				Harrastan salibandya, patikointia, elokuvia ja kirjallisuutta. Kirjallisus lienee tällä hetkellä suosikkiharrastukseni, koska sen avulla opin koko ajan kaikkea uutta.
+				Luen kirjallisuutta laidasta laitaan (etusivulta takasivulle, heh), kaunokirjallisuuden klassikoista harraste- ja tietokirjoihin.
+				Tällä hetkellä yöpöydälläni on Andrew Huntin ja David Thomasin The Pragmatic Programmer. 
+				
+
+				Näiden harrastusten lisäksi meillä on myös koira, joka esiintyy muun muassa sivuston karusellissa. 
+			</p>
+			<p>	Jos haluat tietää lisää harrastuksistani, klikkaa allaolevia pudotusvalikoita.</p>
 
 			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 			<!-- first hobby -->
@@ -194,7 +284,7 @@
         					Olen pelannut salibandya viitosluokalta lähtien. 
 							Ikävä kyllä muutamana viime vuotena en ole päässyt pelaamaan, 
 							koska työnteko sekä opiskelu ovat vieneet niin paljon aikaa. 
-							Tarkoituksena olisikin aloittaa uudestaan salibandyn peluu, koska laji itsessään tarjoaa mukavasti haastetta ja on hyvä tapa päästä kuntoon.
+							Tarkoituksenani on kuitenkin aloittaa harrastus heti tilaisuuden tullen uudestaan.
       					</div>
    					</div>
 			  </div>
@@ -210,8 +300,8 @@
     				</div>
     				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       					<div class="panel-body">
-							Kävimme tyttöystäväni kanssa viime vuonna muutamaan otteeseen patikoimassa. 
-							Kävimme esimerkiksi kiertämässä Kurjenrahkan kansallispuiston ja Nuuksiossa useampaan otteeseen. 
+							Kävimme tyttöystäväni kanssa viime vuonna muutamaan otteeseen patikoimassa, ja innostuin harrastuksesta heti. Luonnossa rentoudun.
+							Kävimme esimerkiksi Pöytyällä Kurjenrahkan kansallispuistossa ja Nuuksiossa useampaan otteeseen. 
      					</div>
     				</div>
   			</div>
@@ -228,9 +318,8 @@
     				<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
       					<div class="panel-body">
 								<p>									
-									Olen rakastan lukemista jo pienestä pitäen. Luenkin nykyään lähes jatkuvasti kirjallisuutta laidasta laitaan. 
-									Alhaalla on lista joistakin lukemistani kirjoista. 
-										Lukeminen: klassikot, sijoituskirjallisuus, ohjelmistokirjallisuus
+									Olen rakastan lukemista jo pienestä pitäen. Olen koonnut viime aikoina lukemistani teoksista lyhyen listan. 
+										
 
 								</p>
 								<br>
@@ -264,58 +353,56 @@
 <!-- Skills -->
 		<div v-show="skills">
 			<p>
-		Tässä muutamia tekniikoita, joita olen opiskellut. </p>
-
+				Tällä sivulla kerron lyhyesti mitä tekniikoita, kieliä ja frameworkkejä olen opiskellut.
+				Näiden lisäksi kerron muutamasta ohjelmasta, jotka olen tehnyt ja mitä ajatukseni on tehdä seuraavaksi.
+			</p>
+			<h3> C++</h3>
 			<p>
-  			C++ oli ensimmäinen tuttavuuteni ohjelmoinnin maailmasta. Sitä opetettiin TTY:llä meille ensimmäisenä ohjelmointikielenä. 
-			
+  			C++ oli ensimmäinen tuttavuuteni ohjelmoinnin maailmasta. Sillä olen koodannut monet harkkatyöt, ja olen
+			   sinut olioiden, sockettien ja periyttämisen kanssa.
 		
 		  </p>
 		  <p>
 		  <img src="python-logo.png" alt="Python" width="260" height="145">
-		  Python on ehdottomasti suosikkikieleni. Se on nopea kirjoittaa ja 
+		  <br>
+		  Python on ehdottomasti suosikkikieleni. Se on nopea kirjoittaa, ja 
 		  tulkkattavana kielenä pienten ohjelmien kirjoittaminen onnistuu joutuisasti.
-		  Lisäksi Pythonin PyPi sisältää enemmän kuin tarpeeksi valmiita kirjastoja helposti käyttöönotettavaksi.
-		  Tämän lisäksi, että Python on helppokäyttöinen, on se myös suosittu kieli. 
-		  Sen vuoksi moneen kirjastoon löytyykin Python toteutus.
+		  Suosionsa vuoksi moneen yleiseen työkaluun löytyykin Python toteutus. 
+		  Hyvänä esimerkkinä toimii <a href="http://selenium-python.readthedocs.io/index.html">Selenium</a>.
+		  Mielestäni Python toimii hyvin varsinkin nettiboteissa. 
+		<a href="http://docs.python-requests.org/en/master/">Request </a> kirjasto on helppokäyttöinen http requestien käsittelyyn.
+		nettisivujen sisällön erotteluun <a href="">BeautifulSoup</a> on oiva työkalu.
 		  </p>
 
 		  <h3> Javascript </h3>
 			<p>
-			Javascript on kielenä erittäin mielenkiintoinen tapaus. Parhaiten pääsinkin tutustumaan siihen TTY:n projektityökurssilla, 
-			jossa teimme datan visualisointiin nettisivun (Matta).
+			Javascriptiin olen parhaiten päässyt tutustumaan TTY:n projektityökurssilla, 
+			jossa teimme datan visualisointiin ohjelman nimeltään Matta.
 			  <br>
-			  Itse en osallistunut Matassa visualisointi osuuteen vaan minun käsialaani olivat taitojen listaaminen ja Dream team finder, joka ikävä kyllä jäi hieman kesken.
-			  Käyttämämme Hohdon rajapinta oli mielenkiintoinen, koska emme saaneet suoraan tarvitsemaamme dataa sieltä. 
-			  Sen vuoksi jouduimmekin hakemaan ensiksi kaikki käyttäjät ja sitten hakemaan jokaiselle käyttäjälle hänen taitonsa.
-			  Tämä olikin opettavaista. Opin esimerkiksi kantapään kautta sen, että javascript on asynkroninen kieli ja koodissa tapahtuu hämmentäviä asioita, jos en ota sitä huomioon.
-			  <br>
-			  Matta toteuttettiin Angular 1:llä, joten kyseinen framework tuli minulle tutuksi. 
-			  Angularin lisäksi olenkin opiskellut Vue.js-frameworkkia. Tämä ohjelmointikehys on melko uusi, mutta saavuttanut siitä huolimatta suuren suosion.
-			  Tämän suuren suosion vuoksi päätin kokeilla kyseistä kirjastoa näillä sivuilla. Esimerkiksi sivujen navigaatio on tehty Vue:n avulla, sekä harrastukset sivun lista ja sen rajaaminen.
-
+			  Matassa minun käsialaani olivat työntekijöiden taitojen listaaminen ja Dream Team -finder.
+			  Matassa käytimme aikaisemman projektityökurssin tuottaman järjestelmän Hohdon rajapintaa.
+			  Tämä projekti opettikin hyvin RESTful-rajapinnan käyttöä.
+			  Opin projektissa myös kantapään kautta sen, että javascript on asynkroninen kieli. 
+			</p>
+			<p>
+			  Toteutimme Matan Angular JS:llä, joten kyseinen framework tuli minulle tutuksi.
+			  Angularin lisäksi olenkin opiskellut <a href="https://vuejs.org/"> Vue.js</a>-frameworkkia. 
+			  Vue.js on melko uusi framework, mutta saavuttanut siitä huolimatta suuren suosion.
+			  Tämän suuren suosion vuoksi päätin kokeilla kyseistä kirjastoa näillä sivuilla. 
+			  Esimerkiksi sivujen navigaatio on tehty Vue:n avulla, sekä Minusta-välilehden listan esittäminen ja rajaaminen käyttävät Vue:ta.
 		  </p>
 
 		  <h3> C# </h3>
 		  <p>
-			  Edellä mainittujen lisäksi olen tutustunut myös C#:n. 
-			  C#:a olen käyttänyt niin TTY:n kurssilla, jossa teimme vuoropohjaisen seikkailupelin, kuin myös ABB:llä. 
-			  ABB:llä tein työhistoria-sivulta löytyvän virusskannauspalvelun nettitoteutuksen. 
-			  Tämän lisäksi refaktoroin ohjelman, joka kuunteli TFS:n lähettämiä SOAP-viestejä ja lähetti niiden perusteella sähköpostia tiettyjen muutoksien tapahtuessa TFS:ssä.
-			  Tämän lisäksi laadin ohjelman, joka siirtää Excelistä dataa TFS:än. Tämä ohjelma tein vaatimustenhallinta-projektin tarpeisiin.
-
+				C#:n olen tutustunut ensimmäisen kerran TTY:llä, jossa teimme harjoitustyönä vuoropohjaisen seikkailupelin. 
+			  Myöhemmin pääsin myös ABB:llä tekemään muutaman pienen ohjelman C#. 
+			  Eräs näistä ohjelmista oli Virusskannauspalvelu, josta löytyy lisää tietoa työhistoria-välilehdeltä.
+			  Palvelun lisäksi refaktoroin ohjelman, joka kuunteli TFS:n lähettämiä SOAP-viestejä 
+			  ja lähetti niiden perusteella sähköpostia tietyistä muutoksista TFS:ssä. 
+			  Kyseessä oli kehittämämme lisäominaisuus TFS:n, jossa tiettyjen tehtävien ja bugien etenemistä pystyttiin seuraamaan sähköpostin välityksellä.
 		  </p>
 
-		</div>
-
-<!-- Work samples -->
-		<div v-show="workSamples">
-		  <p>
-			  Olen tehnyt pieniä harrasteprojekteja. 
-			  Monia en ole viitsinyt pistää julkiseen jakoon, mutta esimerkiksi chatti ohjelma on saatavilla <a href="https://github.com/kankaan"> Githubista </a>
-		  </p>
 		  <h3>Nettiselainpelin automatisointi</h3>
-		  
 		  <p>
 			  Kaikista mielenkiintoisin harrasteprojekti liittyy nettiselainpelin, Travianin, automatisointiin.
 			  Pelissä menestyäkseen täytyy olla koneen ääressä yötä päivää. Tämä käy kuitenkin pitemmän päälle hienman rasittavaksi,
@@ -337,40 +424,24 @@
 		  </p>
 		  <h3>Chat</h3>
 		  <p>
-			  Innostuin ennen joulua testaamaan, miten websocketit toimivat. Tein pienimuotoisen Chat-applikaation niillä.
-			  Backendissä käytin Flaskia ja SQLAlchemya. Applikaatio on saatavilla Githubissa.
+			  Innostuin ennen joulua testaamaan, miten websocketit toimivat. Tein pienimuotoisen Chat-applikaation niiden avulla.
+			  Ohejlman backendissä käytin Flaskia, koska se on minulle entuudestaan tuttu framework ja Flaskin websocketteihin on olemassa hyvä <a href="https://flask-socketio.readthedocs.io/en/latest/"> lisäosa</a>.
+			  Backendissä käytin myös Pythonin SQLAlchemyä tietokannan kanssa kommunikointiin, jotta käyttäjien viestit näkyisivät myös uusille chat käyttäjille.
+			  Frontendissä käytin Bootstrap.css ja Bootstrap.js:ää.
+			  Applikaatio on saatavilla <a href="https://github.com/kankaan"> Githubista </a>.
 		  </p>
+
 		  <h3>Hakurobotti</h3>
 		  <p>
 			  Ennen joulua minulla oli tekeillä myös ohjelma, joka tutkii etuovi.fi:stä kaikki valitun alueen asunnot ja tallentaa ne tietokantaan.
-			  Pääsin tässä työssä alkuun ja tarkoituksena olisi tehdä vielä se toimivaan vaiheeseen, jotta voisin myöhemmin tarkastella myytäviä asuntoja ja vertailla niitä asuntojen hintatiedot -palvelun hintoihin.
-			  Olen aloittanut projektin koodaamisen Pythonilla, joka on minulle valmiiksi tuttu kieli ja sisältää paljon hyviä kirjastoja.
-			  Tässä työssä olen käyttänyt minulle hyvin tutuksi tullutta BeautifulSoup sekä Request -kirjastoja. 
+			  Pääsin tässä työssä alkuun ja tarkoituksena olisi tehdä vielä se toimivaan vaiheeseen, 
+			  jotta voisin myöhemmin tarkastella myytäviä asuntoja ja vertailla niitä asuntojen hintatiedot -palvelun hintoihin.
+			  Olen aloittanut projektin koodaamisen Pythonilla, joka on minulle valmiiksi tuttu kieli.
+			  Sisällön parsimiseen olen käyttänyt tuttuja BeautifulSoup ja Request -kirjastoja. 
 		  </p>
 		</div>
 
-<!-- philosophy -->	
-		<div v-show="philosophy">
 
-			<p>
-				Ohjelmoinnissa minua motivoi lopulta se, että sillä voi tehdä niin paljon kaikkea ja se erityisesti se, 
-				että ohjelmointi tarjoaa mukavan haastavia pähkinöitä purtavaksi. Usein koodatessani unohdankin ajankulum totaalisesti.
-			</p>
-			<p>
-				Ohjelmointi on mielestäni parhainta tiimipelinä, jossa kaikille on määritelty tietyt vastuualueet / tehtävät.
-				Minusta onkin palkitsevaa saada tehtyä uusi ominaisuus ohjelmaan, kuin auttaa tiimikaveria suorittamaan oman tehtävänsä.
-			</p>
-			<p>
-				Minua kiinnostaisi työskennellä alkuun full stack -kehittäjänä ja kokemuksen kertyessä ohjelmistojen tuotannossa
-				haluaisin työskennellä joko scrum masterin tai -product ownerin roolissa. 
-				Nämä roolit kiehtovat minua sillä, olen työskennellyt pitkään Scrum tyyppisesti ja käynyt monia keskusteluja eri ohjelmistotuotantomenelmien toiminnasta ja soveltamisesta.
-			</p>
-			<h3>Opiskelu</h3>
-			<p>
-				Olen opiskellut ohjelmistotuotantoa TTY:llä pääaineenani. Tämän lisäksi sivuaineinani ovat teollisuustalous ja tietojohtaminen.
-				Toivon näiden sivuaineideni avulla ymmärtäväni paremmin ohjelmiston käyttäjien ja hankkijoiden tarpeita.  
-			</p>
-		</div>
 		</div>
 	</div>
 	
