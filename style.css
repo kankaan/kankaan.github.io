@@ -63,7 +63,7 @@ img {
 }
 
 #meetingCardOuter {
-    
+    display: inline-block;
     width: 100%;
     height: 50%;
     margin-top: 5%;
@@ -75,32 +75,34 @@ img {
     box-shadow: 6px -6px 22px -5px rgba(0,0,0,0.45);
 }
 
-#meetingCardInner {
-    padding: 10px;
-    display: inline-block;
+#cardTopic 
+{
+	text-align: center;
 }
 
-#meetingImage {
-    margin-right: 5%;
-}
 
-#meetingCardTexts {
-    
-    padding-top: 5%;
-    padding-left: 5%;
+.meetingText {
+    height:80%;
+    overflow: hidden;
+    position:relative;
 
 }
+
+
+.lattyImage {
+   height: 80%;
+    width:auto;
+   float:left;
+   margin-left:5%;
+   margin-right:5%;
+}
+
+
 #address {
-    padding-top: 20%;
-    margin-bottom: 0%;
+    bottom:0px;
+    position:absolute;
 }
 
-#meetingCardImage {
-    height: 100%;
-    padding: 10px;
-    display: inline-block;
-
-}
 
 #myCarousel {
     height:15%;
