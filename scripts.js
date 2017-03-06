@@ -122,7 +122,7 @@ var instance = new Vue({
                 case 0:
                     this.home = true;
                     this.title = "";
-                    $("#Carousel").carousel(3)
+                    $("#Carousel").carousel(5)
                     break;
                 case 1:
                     this.workHistory = true;

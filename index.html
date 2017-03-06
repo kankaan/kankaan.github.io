@@ -29,22 +29,21 @@
     </ol>
 		-->
 	   <div class="carousel-inner" role="listbox">
-	      	<div class="item">
-    	    		<img src="inge1_shrink.jpg" alt="Inge1" width="460" height="345">
-				  	<div class="carousel-caption">
-  					</div>
-      		</div>
+	      
 		<div class="item">
-    	    <img src="hylly.jpg" alt="Hylly" width="460" height="345">
+    	    <img src="kahvi.jpg" alt="kahvi" width="460" height="345">
    	 	</div>
 		<div class="item">
-			<img src="Inge2_shrink.jpg" alt="Inge2" width="460" height="345">
+			<img src="ingetalvi.jpg" alt="Inge2" width="460" height="345">
 		</div>
-		<div class="item active">
+		<div class="item">
 			<img src="Antti3.jpg" alt="Antti" width="460" height="345">
 		</div>
 		<div class="item">
 			<img src="Antti2.jpg" alt="Antti" width="460" height="345">
+		</div>
+		<div class="item active">
+			<img src="rasperry.jpg" alt="Rasperry Pi" width="460" height="345">
 		</div>
 
     <!-- Left and right controls -->
@@ -58,9 +57,6 @@
     </a>
 
 	   </div>
-
-
-
 	<div id="app">
        		 <div id="navBar" class="row">
            		<ul id="navigationbar" class="nav nav-tabs"
@@ -78,28 +74,28 @@
             		</div>
 <!-- Frontpage -->
         <div v-show=" home">
-			<h4 >Tervetuloa kotisivuilleni!</h4>
 
-			<div id="meetingCard" class="row">
-				<div id="meetingCardImage" class="col-sm-4">
-				<img src="latyt.jpg" id="latty" alt="Antti" align="left"  >
-				</div>
-		
-				<div id="meetingCardTexts" class="col-sm-8">
+			<div id="meetingCardOuter" >
+				<div id="meetingCardInner">
+								<h4 >Tervetuloa kotisivuilleni!</h4>
+
+					<div id="meetingImage">
+				<img src="latyt.jpg" id="latty" height="80%" padding="5%" alt="Antti" align="left"  >
+					</div>
+					<div id="meetingCardTexts">
 					<p>
 						Näillä kotisivuillani kerron hieman itsestäni ja taidoistani. Ollaanhan yhteyksissä!
 					</p>
+			
 				 
-					<div id="address">
 					<span>Antti K</span>
 					<br>
 			 			040 835 6893 
 						 <br>
 					antti.kankaanranta@gmail.com
 					</div>
-				</div>
 			</div>
-
+			</div>
 		</div>
 
 
@@ -362,6 +358,7 @@
 			   sinut olioiden, sockettien ja periyttämisen kanssa.
 		
 		  </p>
+		  <h3> Python </h3>
 		  <p>
 		  <img src="python-logo.png" alt="Python" width="260" height="145">
 		  <br>
@@ -395,8 +392,8 @@
 		  <h3> C# </h3>
 		  <p>
 				C#:n olen tutustunut ensimmäisen kerran TTY:llä, jossa teimme harjoitustyönä vuoropohjaisen seikkailupelin. 
-			  Myöhemmin pääsin myös ABB:llä tekemään muutaman pienen ohjelman C#. 
-			  Eräs näistä ohjelmista oli Virusskannauspalvelu, josta löytyy lisää tietoa työhistoria-välilehdeltä.
+			  Myöhemmin pääsin myös ABB:llä tekemään muutaman pienen ohjelman C#:lla-
+			  Eräs näistä ohjelmista oli virusskannauspalvelu, josta löytyy lisää tietoa työhistoria-välilehdeltä.
 			  Palvelun lisäksi refaktoroin ohjelman, joka kuunteli TFS:n lähettämiä SOAP-viestejä 
 			  ja lähetti niiden perusteella sähköpostia tietyistä muutoksista TFS:ssä. 
 			  Kyseessä oli kehittämämme lisäominaisuus TFS:n, jossa tiettyjen tehtävien ja bugien etenemistä pystyttiin seuraamaan sähköpostin välityksellä.
@@ -405,13 +402,9 @@
 		  <h3>Nettiselainpelin automatisointi</h3>
 		  <p>
 			  Kaikista mielenkiintoisin harrasteprojekti liittyy nettiselainpelin, Travianin, automatisointiin.
-			  Pelissä menestyäkseen täytyy olla koneen ääressä yötä päivää. Tämä käy kuitenkin pitemmän päälle hienman rasittavaksi,
-			  joten päätin, että yritän automatisoida pelin eniten aikaa kuluttavimman elementin, ryöstelyn.
-			  Minulla oli hieman vaikeuksia päättää, että miten teen tämän automatisoinnin. Teenkö sen pelkästään http-requesteilla vai miten sen toteutan?
-			  Tulin kuitenkin tulokseen, että sivulla on javascriptiä, jota saattaa vaikuttaa pelin suorittamiseen.
-		  <br>
-			  Näin ollen päädynkin siihen lopputulokseen, että kaikista parasta on automatisoida selaimen toiminta. 
-			  Sen hoidin käyttämällä Seleniumia. Selenium itsessään on tosi helppokäyttöinen työkalu. Kyseinen työkalu on minun Bitbucket repossani, 
+			  Pelissä menestyäkseen täytyy olla koneen ääressä yötä päivää. Tämä käy kuitenkin pitemmän päälle hienman rasittavaksi ja parisuhdetta riipiväksi,
+			  joten päätin, että yritän automatisoida pelin eniten aikaa kuluttavimman elementin, ryöstelyn. Automatisoin selaimen 
+			  toimintaa käyttämällä Seleniumilla. Selenium itsessään on tosi helppokäyttöinen työkalu. Kyseinen työkalu on minun Bitbucket repossani, 
 			  mutta se ei ole yleisessä jaossa.
 		  </p>
 		  <h3>ABB:n tuotanto</h3>
@@ -436,7 +429,7 @@
 			  Ennen joulua minulla oli tekeillä myös ohjelma, joka tutkii etuovi.fi:stä kaikki valitun alueen asunnot ja tallentaa ne tietokantaan.
 			  Pääsin tässä työssä alkuun ja tarkoituksena olisi tehdä vielä se toimivaan vaiheeseen, 
 			  jotta voisin myöhemmin tarkastella myytäviä asuntoja ja vertailla niitä asuntojen hintatiedot -palvelun hintoihin.
-			  Olen aloittanut projektin koodaamisen Pythonilla, joka on minulle valmiiksi tuttu kieli.
+			  Olen aloittanut projektin koodaamisen Pythonila.
 			  Sisällön parsimiseen olen käyttänyt tuttuja BeautifulSoup ja Request -kirjastoja. 
 		  </p>
 		</div>
